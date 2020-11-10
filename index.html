@@ -1,0 +1,138 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>jQuery Mobile</title>
+	
+	<link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.4.5.min.css"/>
+	<script src="jquery.mobile/jquery-1.11.1.min.js"></script>
+	<script src="jquery.mobile/jquery.mobile-1.4.5.min.js"></script>
+	<script src="cordova.js"></script>	
+
+<style>
+   li { list-style:none; }
+  .picture { list-style:none; padding:0; margin:0; }
+  .picture li { float:left; width:50%;}
+  .picture li a {display:block; margin:5px; border: 1px }
+  .picture li img { display:block; width:50%;  height:auto;}
+  .picture li img:hover { display:block; width:100%;  height:auto;} 
+</style>
+</head>
+
+<body>
+<div data-theme="b">
+	<div data-role="page" id="home">
+		<div data-role="header" data-theme="b">
+			<h1>동의과학대학교</h1>
+		</div>
+		<div data-role="content" style="text-align:center">
+				<img src="5.jpeg" >
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#intro">대학소개</a></li>
+				<li><a href="#movie" data-rel="dialog">홍보영상</a></li>
+				<li><a href="#wizard3-1" data-rel="dialog">노래</a></li>
+				<li><a href="#gallery">gallery</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>DIT</h1>
+		</div>
+	</div>
+	
+	<div data-role="page" id="intro" data-theme="b">
+		<div data-role="header" data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>			
+			<h1>동의과학대학교-소개</h1>
+		</div>
+		<div data-role="content">
+				<div  style="text-align:center">
+					<img src="5.jpeg">
+				</div>			
+			<div data-role="collapsible-set" data-theme="b" data-content-theme="e">
+				<div data-role="collapsible" data-collapsed="false">
+					<h3>대학설립</h3>
+					<p>동의과학대학교(東義科學大學校, Dong-Eui Institute of Technology 는 부산광역시 부산진구에 있는 대한민국의 사립 전문대학이다. 그러나 4년제로 운영되는 동의대학교와는 이름이 다른 대학으로, 2년제로 운영된다.</p>
+				</div>
+				<div data-role="collapsible">
+					<h3>오시는 길</h3>
+					<img src="DIT.png">
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>DIT</h1>
+		</div>		
+	</div>
+	
+	<div data-role="page" id="movie" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>동의과학대학교-홍보 영상</h1>
+		</div>
+		<div data-role="content" >
+			<div class="ui-bar ui-bar-e">동의과학대학교 홍보 동영상</div><br/>
+			<li><video controls width="100%" preload="metadata">
+				<source src="videoplayback.mp4" type="video/mp4">
+			</video></li>
+		</div>
+		<div data-role="footer" data-theme="b">
+		</div>
+	</div>
+	
+	<div data-role="page" id="wizard3-1">
+		<div data-role="header">
+			<h1>대표 노래1</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">노래1</div><br/>
+			<audio controls width="100%" preload="metadata">
+				<source src="song1.mp3" type="audio/mp3">
+			</audio>	
+			<img src="1.jpeg" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#home"  data-direction="reverse">이전</a>
+			<a href="#wizard3-2" data-rel="dialog" data-transition="slide">다음</a>
+		</div>
+	</div>
+
+	<div data-role="page" id="wizard3-2">
+		<div data-role="header">
+			<h1>대표 노래2</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">노래2</div><br/>
+			<audio controls width="100%" preload="metadata">
+				<source src="song2.mp3" type="audio/mp3">
+			</audio>			
+			<img src="2.jpeg" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#wizard3-1"  data-direction="reverse">이전</a>
+			<a href="#home">처음</a>
+		</div>
+	</div>
+
+	<div data-role="page" id="gallery"  data-theme="b">
+		<div data-role="header" data-position="fixed"  data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+			<h1>동의과학대학교-갤러리</h1>
+		</div>
+		<div data-role="content">
+            <ul class="picture">
+				<li><a href="1.jpeg" rel="external"><img src="1.jpeg" /></a></li>	
+				<li><a href="2.jpeg" rel="external"><img src="2.jpeg" /></a></li>	
+				<li><a href="3.jpeg" rel="external"><img src="3.jpeg" /></a></li>	
+				<li><a href="4.jpeg" rel="external"><img src="4.jpeg" /></a></li>	
+				<li><a href="6.jpeg" rel="external"><img src="6.jpeg" /></a></li>
+				<li><a href="7.jpeg" rel="external"><img src="7.jpeg" /></a></li>
+            </ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>DIT</h1>
+		</div>		
+	</div>
+</div>	
+</body>
+</html>
